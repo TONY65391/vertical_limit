@@ -49,3 +49,16 @@ window.onresize = function(){
         menu.classList.remove('open');
     }
 }
+
+// ADD SECTION ONSCROLL
+var right = 0;
+const sections = document.querySelectorAll('main section');
+window.addEventListener('scroll', () => {
+    const bubble = sections[1].querySelector('.bubble');
+    const image3 = sections[2].querySelector('img');
+    
+    bubble.style.right = window.scrollY / 8 + "px";
+    image3.style.left = window.scrollY / 8 + "px";
+})
+
+
