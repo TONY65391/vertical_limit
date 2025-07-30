@@ -6,7 +6,14 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: 0.5s ease;
 }
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
 :root{
+    --harley-orange: #DD2E18;
+    --dark-orange: #FFAB00;
+    --grey: rgb(97, 41, 24);
     --red-color: #BB2649;
     --blue-color: #0F4C81;
     --orange-color: #FF6B01;
@@ -321,7 +328,7 @@ main section:nth-child(1) .content h1{
     color: transparent;
     background-clip: text;
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "EB Garamond", serif;
 }
 main section:nth-child(1) .content p{
     margin-top: 20px;
@@ -380,6 +387,8 @@ main section:nth-child(2) h1{
     color: transparent;
     background-clip: text;
     margin-bottom: 30px;
+    font-family: "Playwrite HU", cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 main section:nth-child(2) p{
     color: grey;
@@ -450,6 +459,14 @@ main section:nth-child(3) .content{
 main section:nth-child(3) .content h2{
     font-size: 5em;
 }
+main section:nth-child(3) .content p{
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
+}
 main section:nth-child(3) .content div{
     text-align: center;
     padding: 15px;
@@ -478,7 +495,7 @@ main section:nth-child(3) .content div:hover{
     }
 }
 main section:nth-child(3) img{
-    filter: drop-shadow(2px 2px 4px black);
+    /* filter: drop-shadow(2px 2px 4px black); */
     width: 50px;
     height: 50px;
     position: absolute;
@@ -515,22 +532,68 @@ main section:nth-child(3)::after{
 
 /* MAIN FOURTH SECTION */
 main section:nth-child(4){
-    background: url("/static/images/pexels-stephen-noulton-421904730-17041732.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    height: 100vh;
+    background-color: wheat;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+main section:nth-child(4) img:nth-child(2){
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 main section:nth-child(4) .content{
     display: grid;
-    grid-template-columns: repeat(2, 40%);
-    gap: 20%;
+    grid-template-columns: repeat(2, 48%);
+    gap: 4%;
     padding: 30px;
+    text-align: justify;
+}
+main section:nth-child(4) .content img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;
 }
 main section:nth-child(4) .content div{
-    border: 2px solid red;
+    border: 5px solid white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 50px;
+    overflow: hidden;
+    background: white;
 }
+main section:nth-child(4) .content .span-content{
+    border-radius: 0;
+    padding: 15px;
+    box-shadow: none;
+}
+main section:nth-child(4) .content .span-content h1{
+    text-align: center;
+    color: transparent;
+    background: var(--background-color);
+    background-clip: text;
+    border: 2px solid;
+    border-image: var(--background-color) 1 0;
+    margin: 20px 0;
+}
+main section:nth-child(4) .content .span-content p{
+    text-shadow: none;
+}
+/* main section:nth-child(4)::after{
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+} */
+
+
+/* MAIN FIFTH SECTION */
+
 
 @media screen and (max-width:700px) {
     header .links a, header .search{
@@ -541,21 +604,23 @@ main section:nth-child(4) .content div{
     }
 
     /* BUBBLES AND PSEUDOS*/
-    main section .bubble{
+    main section .bubble, .obj{
         height: 50px;
         width: 50px;
     }
     main section:nth-child(3)::before{
-        height: 50px;
-        width: 50px;
+        height: 70px;
+        width: 70px;
         left: 10%;
-        bottom: 0;
+        top: 0;
     }
     main section:nth-child(3)::after{
-        width: 50px;
-        height: 50px;
-        bottom: 3%;
+        width: 70px;
+        height: 70px;
+        bottom: 0%;
     }
+    
+    
     /* MAIN FIRST SECTION */
     main section:nth-child(1){
         height: fit-content;
@@ -620,6 +685,25 @@ main section:nth-child(4) .content div{
     }
 
     /* MAIN FOURTH SECTION */
+    main section:nth-child(4){
+        height: fit-content;
+    }
+    main section:nth-child(4) .content{
+        display: block;
+    }
+    main section:nth-child(4) .content img{
+        height: auto;
+    }
+    main section:nth-child(4) .content .span-content h1{
+        margin: 0px 0 20px 0;
+    }
+    main section:nth-child(4) .content .span-content p{
+        font-size: 14px;
+    }
+    main section:nth-child(4) .content #card2{
+        margin-top: 50px;
+    }
+    
 }
 
 
