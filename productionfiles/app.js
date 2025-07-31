@@ -58,10 +58,13 @@ window.addEventListener('scroll', () => {
     
     bubble.style.right = window.scrollY / 8 + "px";
     sections[2].querySelector('img').style.left = window.scrollY / 8 + "px";
+    sections[2].querySelector('img').style.width = window.scrollY / 8 + "px";
     sections[3].querySelectorAll('img')[0].style.marginLeft = window.scrollY / 8 + "px";
     sections[3].querySelectorAll('img')[1].style.right = window.scrollY / 8 + "px";
+    sections[3].querySelectorAll('img')[1].style.width = window.scrollY / 8 + "px";
+    sections[4].querySelector('.bubble').style.left = window.scrollY / 5 + "px";
 
-    // console.log(sections[3].querySelectorAll('img')[0])
+    // console.log(sections[4].querySelector('.bubble'))
 })
 
 
