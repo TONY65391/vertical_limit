@@ -687,11 +687,16 @@ main section:nth-child(5) .bubble{
 main section:nth-child(6){
     position: relative;
     height: fit-content;
-    display: flex;
-    align-items: center;
     background: var(--razzmatazz);
     background-color: black;
     padding: 0 20px;
+}
+main section:nth-child(6) h1, h3{
+    color: transparent;
+    background: linear-gradient(to right, red, blue);
+    background-clip: text;
+    text-align: center;
+    padding-top: 30px;
 }
 main section:nth-child(6) .content{
     display: grid;
@@ -701,7 +706,7 @@ main section:nth-child(6) .content{
     width: fit-content;
     column-gap: 20px;
     margin-top: 50px;
-    /* border: 2px solid red; */
+    scroll-snap-type: x mandatory;
 }
 main section:nth-child(6) .content .item{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -712,6 +717,7 @@ main section:nth-child(6) .content .item{
     z-index: 2;
     height: min(100vh, 1000px);
     animation: animateBorder 2s ease infinite alternate;
+    scroll-snap-align: center;
 }
 @keyframes animateBorder{
     from{border: 5px solid white;}
@@ -734,7 +740,6 @@ main section:nth-child(6) .content .item img{
     height: 70%;
     object-fit: cover;
     width: 100%;
-    /* border-radius:100% 0% 100% 0% / 0% 50% 50% 100%; */
 }
 main section:nth-child(6) .content .connect{
     width: 90%;
@@ -745,6 +750,25 @@ main section:nth-child(6) .content .connect{
     z-index: 12;
 }
 
+
+/* MAIN SEVENTH SECTION */
+main section:nth-child(7){
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+main section:nth-child(7) svg{
+    position: absolute;
+    top: 0;
+}
+main section:nth-child(7) .content:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border: 2px solid red;
+}
 
 ::-webkit-scrollbar{
     width: 10px;
@@ -886,7 +910,7 @@ main section:nth-child(6) .content .connect{
     
     /* MAIN FIFTH SECTION */
     main section:nth-child(5){
-        height: fit-content;
+        height: 100vh;
     }
     main section:nth-child(5) img{
         width: 100px;
