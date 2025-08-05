@@ -828,8 +828,12 @@ main section:nth-child(7) .content:nth-child(3) div.active{
     animation: resetDiv 1s ease forwards;
 }
 @keyframes resetDiv{
+    from{
+        filter: blur(20px) brightness(50%);
+    }
     to{
         transform: translateX(0);
+        filter: blur(0px) brightness(100%);
     }
 }
 
