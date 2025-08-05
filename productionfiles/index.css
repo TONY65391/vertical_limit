@@ -109,6 +109,8 @@ header .search input{
     box-shadow: 0px 2px 3px black inset;
 }
 
+
+
 /* BODY */
 body:has(header nav:nth-child(5).openSubMenu) section{
     animation: dimDocument 0.5s ease forwards;
@@ -788,7 +790,6 @@ main section:nth-child(7) .content:nth-child(2) p{
     line-height: 1.5;
 }
 main section:nth-child(7) .content:nth-child(3){
-    /* border: 5px solid green; */
     display: grid;
     grid-template-columns: repeat(3, 30%);
     gap: 5%;
@@ -814,6 +815,22 @@ main section:nth-child(7) .content:nth-child(3) div img{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+/* MAIN SEVENTH SECTION SECOND CONTENT ANIMATIONS*/
+main section:nth-child(7) .content:nth-child(3) div:nth-child(odd){
+    transform: translateX(-100vw);
+}
+main section:nth-child(7) .content:nth-child(3) div:nth-child(even){
+    transform: translateX(100vw);
+}
+main section:nth-child(7) .content:nth-child(3) div.active{
+    animation: resetDiv 1s ease forwards;
+}
+@keyframes resetDiv{
+    to{
+        transform: translateX(0);
+    }
 }
 
 ::-webkit-scrollbar{
@@ -978,6 +995,10 @@ main section:nth-child(7) .content:nth-child(3) div img{
     }
 
     /* MAIN SIXTH SECTION */
+    main section:nth-child(6){
+        /* border: 2px solid red; */
+        padding: 50px 20px;
+    }
     main section:nth-child(6) .content{
         grid-template-columns: repeat(3, 100%);
     }
@@ -992,7 +1013,6 @@ main section:nth-child(7) .content:nth-child(3) div img{
     }
     main section:nth-child(7) .content:nth-child(2) h1{
         font-size: 3rem;
-        width: fit-content;
         text-align: center;
     }
     main section:nth-child(7) .content:nth-child(2) p{
@@ -1001,6 +1021,8 @@ main section:nth-child(7) .content:nth-child(3) div img{
     }
     main section:nth-child(7) .content:nth-child(3){
         grid-template-columns: repeat(1, 100%);
+        text-align: center;
+        gap: 3%;
     }
 }
 

@@ -57,13 +57,26 @@ window.addEventListener('scroll', () => {
     const bubble = sections[1].querySelector('.bubble');
     bubble.style.right = window.scrollY / 15 + "px";
     sections[2].querySelector('img').style.left = window.scrollY / 50 + "px";
-    sections[2].querySelector('img').style.left = window.scrollY / 12 + "px";
-    sections[3].querySelectorAll('img')[0].style.marginLeft = window.scrollY / 15 + "px";
-    sections[3].querySelectorAll('img')[1].style.right = window.scrollY / 15 + "px";
+    sections[2].querySelector('img').style.left = window.scrollY / 40 + "px";
+    sections[3].querySelectorAll('img')[0].style.marginLeft = window.scrollY / 40 + "px";
+    sections[3].querySelectorAll('img')[1].style.right = window.scrollY / 40 + "px";
     // sections[3].querySelectorAll('img')[1].style.width = window.scrollY / 70 + "px";
     sections[4].querySelector('.bubble').style.left = window.scrollY / 70 + "px";
 
-    // console.log(sections[4].querySelector('.bubble'))
+
+    // EACH DIVS IN THE SEVENTH SECTION
+    const seventhSection = document.querySelectorAll('main section')[6];
+    const seventhSectionContent = seventhSection.querySelectorAll('.content')[1];
+    const seventhSectionContentDivs =  seventhSectionContent.querySelectorAll('div');
+    seventhSectionContentDivs.forEach(div => {
+        const divRect = div.getBoundingClientRect();
+    
+        if (divRect.top <= 350){
+            div.classList.add('active');
+        }
+    })
 })
 
 
+
+console.log(seventhSectionContentDivs);
