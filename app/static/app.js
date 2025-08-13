@@ -71,7 +71,7 @@ window.addEventListener('scroll', () => {
     seventhSectionContentDivs.forEach(div => {
         const divRect = div.getBoundingClientRect();
     
-        if (divRect.top <= 350){
+        if (divRect.top <= 500){
             div.classList.add('active');
         }
     })
